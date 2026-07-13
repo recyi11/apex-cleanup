@@ -72,7 +72,7 @@ function Get-ClientPaths {
     $paths = @()
     foreach ($name in $Names) {
         $paths += Get-Process -Name $name -ErrorAction SilentlyContinue |
-            Where-Object { $_.Path } |
+            Where-Object { $_.Path -and $_.Path -notmatch "\\compatibility32\\" } |
             Select-Object -ExpandProperty Path
     }
 
@@ -104,9 +104,9 @@ function Start-Clients {
     }
 }
 
-function Get-ApexLeftovers {
+function Get-BlockingLeftovers {
     Get-Process -ErrorAction SilentlyContinue | Where-Object {
-        $_.ProcessName -match "^(r5apex|r5apex_dx12|EasyAntiCheat|EasyAntiCheat_EOS|EAAntiCheat|EACefSubProcess|EADesktop|steam|steamwebhelper|GameOverlayUI)$"
+        $_.ProcessName -match "^(r5apex|r5apex_dx12|EasyAntiCheat|EasyAntiCheat_EOS|EAAntiCheat)$"
     }
 }
 
@@ -138,15 +138,15 @@ Start-Clients -Paths $steamClientPaths -Label "Steam"
 Start-Clients -Paths $eaClientPaths -Label "EA App"
 
 Write-Step "Final check"
-$leftovers = @(Get-ApexLeftovers)
+$leftovers = @(Get-BlockingLeftovers)
 if ($leftovers.Count -eq 0) {
-    Write-Host "Done. Apex / EA / anti-cheat leftovers are closed." -ForegroundColor Green
+    Write-Host "Done. Apex and anti-cheat leftovers are closed." -ForegroundColor Green
     exit 0
 }
 
 $leftovers | Select-Object Id, ProcessName, Responding, Path | Format-Table -AutoSize
 Write-Host ""
-Write-Host "Some entries are still visible. If taskkill says there is no running instance, Windows is holding a dead process object." -ForegroundColor Yellow
+Write-Host "Some Apex / anti-cheat entries are still visible. If taskkill says there is no running instance, Windows is holding a dead process object." -ForegroundColor Yellow
 Write-Host "That state is normally cleared by a reboot."
 
 if ($RestartIfStuck) {

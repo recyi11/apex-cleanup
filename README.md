@@ -15,13 +15,13 @@
 
 ## 使用方法
 
-### EXE 版
+### 单文件 BAT 版
 
-EXE 版放在单独的 `exe` 分支，下载 `ApexCleanup.exe` 后直接双击运行。
+单文件 BAT 版放在单独的 `exe` 分支，下载 `ApexCleanup.bat` 后直接双击运行。
 
-下载地址：[ApexCleanup.exe](https://github.com/recyi11/apex-cleanup/blob/exe/ApexCleanup.exe)
+下载地址：[ApexCleanup.bat](https://github.com/recyi11/apex-cleanup/blob/exe/ApexCleanup.bat)
 
-这是自包含单文件版本，不需要另外安装 .NET，也不需要把 `.cmd` 和 `.ps1` 放在一起。
+这是单文件版本，不需要 `.cmd` 和 `.ps1` 放在一起，运行时会显示具体步骤。
 
 如果弹出管理员权限请求，请允许。
 
@@ -86,13 +86,13 @@ It only attempts to close stuck game processes, EA App / Steam related leftover 
 
 ## Usage
 
-### EXE Version
+### Standalone BAT Version
 
-The EXE build lives on the separate `exe` branch. Download `ApexCleanup.exe`, then double-click it.
+The standalone BAT build lives on the separate `exe` branch. Download `ApexCleanup.bat`, then double-click it.
 
-Download: [ApexCleanup.exe](https://github.com/recyi11/apex-cleanup/blob/exe/ApexCleanup.exe)
+Download: [ApexCleanup.bat](https://github.com/recyi11/apex-cleanup/blob/exe/ApexCleanup.bat)
 
-This is a self-contained single-file build, so it does not require installing .NET or keeping the `.cmd` and `.ps1` files together.
+This is a single-file build, so it does not require keeping the `.cmd` and `.ps1` files together. It shows each cleanup step in the console.
 
 Allow the Administrator prompt if Windows asks.
 
