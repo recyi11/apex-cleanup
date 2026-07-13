@@ -17,7 +17,11 @@
 
 ### EXE 版
 
-直接下载并双击 `dist-single/ApexCleanup.exe`。这是自包含单文件版本，不需要另外安装 .NET，也不需要把 `.cmd` 和 `.ps1` 放在一起。
+EXE 版放在单独的 `exe` 分支，下载 `ApexCleanup.exe` 后直接双击运行。
+
+下载地址：[ApexCleanup.exe](https://github.com/recyi11/apex-cleanup/blob/exe/ApexCleanup.exe)
+
+这是自包含单文件版本，不需要另外安装 .NET，也不需要把 `.cmd` 和 `.ps1` 放在一起。
 
 如果弹出管理员权限请求，请允许。
 
@@ -84,7 +88,11 @@ It only attempts to close stuck game processes, EA App / Steam related leftover 
 
 ### EXE Version
 
-Download and double-click `dist-single/ApexCleanup.exe`. This is a self-contained single-file build, so it does not require installing .NET or keeping the `.cmd` and `.ps1` files together.
+The EXE build lives on the separate `exe` branch. Download `ApexCleanup.exe`, then double-click it.
+
+Download: [ApexCleanup.exe](https://github.com/recyi11/apex-cleanup/blob/exe/ApexCleanup.exe)
+
+This is a self-contained single-file build, so it does not require installing .NET or keeping the `.cmd` and `.ps1` files together.
 
 Allow the Administrator prompt if Windows asks.
 
