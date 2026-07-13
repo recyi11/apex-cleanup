@@ -15,6 +15,14 @@
 
 ## 使用方法
 
+### EXE 版
+
+直接下载并双击 `dist-single/ApexCleanup.exe`。这是自包含单文件版本，不需要另外安装 .NET，也不需要把 `.cmd` 和 `.ps1` 放在一起。
+
+如果弹出管理员权限请求，请允许。
+
+### 脚本版
+
 1. 下载本仓库里的两个文件：
    - `apex-cleanup.cmd`
    - `apex-cleanup.ps1`
@@ -73,6 +81,14 @@ It only attempts to close stuck game processes, EA App / Steam related leftover 
 - Easy Anti-Cheat / EA AntiCheat leftovers cause the next launch to fail
 
 ## Usage
+
+### EXE Version
+
+Download and double-click `dist-single/ApexCleanup.exe`. This is a self-contained single-file build, so it does not require installing .NET or keeping the `.cmd` and `.ps1` files together.
+
+Allow the Administrator prompt if Windows asks.
+
+### Script Version
 
 1. Download these two files from this repository:
    - `apex-cleanup.cmd`
