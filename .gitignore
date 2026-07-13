@@ -1,7 +1,0 @@
-.dotnet-home/
-.nuget-packages/
-.tmp/
-ApexCleanupExe/bin/
-ApexCleanupExe/obj/
-dist/
-*.pdb
