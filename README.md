@@ -1,8 +1,6 @@
-# Apex Cleanup / Apex 卡死修复
-
 中文 | [English](#english)
 
-## 中文
+## 简介
 
 一个用于处理 Apex Legends 卡死、退出失败、反作弊残留或启动器残留的小工具。
 
